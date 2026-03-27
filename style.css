@@ -58,3 +58,36 @@ footer {
 header nav ul li a:hover {
     color: #e94560;
 }
+
+section{
+    margin-bottom: 80px;
+}
+
+section h2 {
+    font-size: 32px;
+    color: #1a1a2e;
+    margin-bottom: 16px;
+}
+
+#inicio {
+    padding: 60px 0;
+    border-bottom: 2px solid #e94560;
+}
+
+#inicio h2 {
+    font-size: 48px;
+}
+
+#inicio a { 
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 32px;
+    background-color: #e94560;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+#inicio a:hover {
+    background-color: #1a1a2e;
+}
