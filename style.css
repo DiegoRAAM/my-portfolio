@@ -26,7 +26,7 @@ header h1 {
 header nav ul { 
     list-style: none;
     display: flex;
-    gap: 24 px
+    gap: 24px
 }
 
 header nav ul li a {
@@ -90,4 +90,27 @@ section h2 {
 
 #inicio a:hover {
     background-color: #1a1a2e;
+}
+
+@media (max-width: 768px) {
+    header{
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    main {
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+
+    #inicio h2 {
+        font-size: 32px;
+    }
 }
