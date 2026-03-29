@@ -92,16 +92,40 @@ section h2 {
     background-color: #1a1a2e;
 }
 
+#menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
-    header{
+    header {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
         gap: 16px;
+    }
+
+    #menu-btn {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+    }
+
+    header nav.activo {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 
     header nav ul {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 12px;
     }
 
