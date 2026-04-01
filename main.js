@@ -29,3 +29,5 @@ document.querySelector("#formulario").addEventListener("submit", function(e) {
         document.querySelector("#respuesta").style.color = "#1a1a2e";
     }
 })
+
+document.querySelector(".grid-proyectos").style.display

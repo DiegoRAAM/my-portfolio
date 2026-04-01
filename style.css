@@ -100,6 +100,12 @@ section h2 {
     font-size: 28px;
     cursor: pointer;
 }
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 32px;
+}
 
 @media (max-width: 768px) {
     header {
@@ -136,6 +142,10 @@ section h2 {
 
     #inicio h2 {
         font-size: 32px;
+    }
+
+    .grid-proyectos {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -178,4 +188,47 @@ section h2 {
     margin-top: 16px;
     font-size: 16px;
     color: #1a1a2e;
+}
+
+.grid-protecto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.tarjeta {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; 
+}
+
+.tarjeta h3 {
+    font-size: 20px;
+    color: #1a1a2e;
+}
+
+.tarjeta p {
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.6;
+}
+
+.tarjeta a {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #e94560;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14 px;
+    margin-top: auto;
+    color: white;
+}
+
+.tarjeta a:hover {
+    background-color: #1a1a2e;
 }
