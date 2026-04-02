@@ -30,4 +30,53 @@ document.querySelector("#formulario").addEventListener("submit", function(e) {
     }
 })
 
-document.querySelector(".grid-proyectos").style.display
+document.querySelector("#chat-enviar").addEventListener("click", async function() {
+    let pregunta = document.querySelector("#chat-pregunta").value;
+    
+    if (pregunta === "") return;
+
+    agregarMensaje(pregunta, "usuario");
+    document.querySelector("#chat-pregunta").value = "";
+
+    let respuesta = await preguntarIA(pregunta);
+    agregarMensaje(respuesta, "asistente");
+});
+
+function agregarMensaje(texto, tipo) {
+    let mensajes = document.querySelector("#chat-mensajes");
+    let mensaje = document.createElement("div");
+    mensaje.textContent = texto;
+    mensaje.style.padding = "10px 14px";
+    mensaje.style.borderRadius = "8px";
+    mensaje.style.maxWidth = "80%";
+    
+    if (tipo === "usuario") {
+        mensaje.style.backgroundColor = "#e94560";
+        mensaje.style.color = "white";
+        mensaje.style.alignSelf = "flex-end";
+    } else {
+        mensaje.style.backgroundColor = "#f0f0f0";
+        mensaje.style.color = "#333";
+        mensaje.style.alignSelf = "flex-start";
+    }
+    
+    mensajes.appendChild(mensaje);
+    mensajes.scrollTop = mensajes.scrollHeight;
+}
+
+async function preguntarIA(pregunta) {
+    try {
+        let respuesta = await fetch("http://localhost:3000/preguntar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ pregunta: pregunta })
+        });
+
+        let data = await respuesta.json();
+        return data.respuesta;
+    } catch (error) {
+        return "Lo siento, hubo un error al conectar con la IA.";
+    }
+}

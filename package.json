@@ -1,0 +1,25 @@
+{
+  "name": "mi-portafolio",
+  "version": "1.0.0",
+  "description": "Después de varios intentos, hoy vuelvo a empezar en la programación. \r Inicio una ingeniería en desarrollo de software y retomo mi aprendizaje autodidacta con más enfoque y determinación. Aunque el tiempo es limitado, tengo claro que la constancia hará la diferencia.\r No se trata de avanzar rápido, sino de no detenerme. Este es mi compromiso conmigo mismo",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoRAAM/my-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiegoRAAM/my-portfolio/issues"
+  },
+  "homepage": "https://github.com/DiegoRAAM/my-portfolio#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^4.22.1",
+    "node-fetch": "^2.7.0"
+  }
+}
